@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nochance 3D - Arte Digital</title>
+    <meta name="description" content="¡Bienvenido a Nochance 3D - Arte Digital! Somos un estudio de arte digital ubicado en Santiago de Chile. Explore nuestro portafolio y contáctenos para proyectos personalizados.">
+    <meta name="keywords" content="Arte digital, Nochance 3D, Santiago de Chile, estudio de arte, diseño 3D, animación, videojuegos">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy5q+V0dIcAjbsMFeA2Ot4U6MwGJ7fG2n"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container animate__animated animate__fadeInUp">
+            <img src="../img/logov2.png" alt="Tu Logo" height="50">
+            <a href="../index.html" class="title">DA NATURAL MAFIA</a>
+        </div>
+        <nav class="animate__animated animate__fadeInUp">
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="../pages/portafolio.html">PORTAFOLIO</a></li>
+                <li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+                <li><a href="../pages/studio.html">STUDIO</a></li>
+                <li><a href="../pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+      <section id="contacto">
+        <div class="contact-info">
+            <h2>Contacto</h2>
+            <p>Estamos ubicados en Santiago de Chile.</p>
+            <p>Teléfono: +123456789</p>
+            <p>Email: danaturalmafia@gmail.com</p>
+        </div>
+
+        <!-- Sistema form para poder recibir mensajes de futuros clientes-->
+        <div class="contact-form">
+            <h2>Agenda tu servicio</h2>
+            <form action="procesar_formulario.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="mensaje">Mensaje adicional:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <div class="footer-info">
+            <p class="location">Ubicación: Santiago de Chile</p>
+            <p class="language">Idioma: Español</p>
+        </div>
+    </footer>
+
+     <!-- Agrega las siguientes líneas para cargar los scripts de Bootstrap desde el CDN -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+     integrity="sha384-bBqkv9HA8TDCka+eACbRrBma9jVl5u2KAQI9y0SsFw==
+     crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy5q+V0dIcAjbsMFeA2Ot4U6MwGJ7fG2n"
+     crossorigin="anonymous"></script>
+
+</body>
+</html>

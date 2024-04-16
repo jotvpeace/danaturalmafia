@@ -1,0 +1,437 @@
+@charset "UTF-8";
+/* Variables */
+/* Mixin para estilos de texto */
+/* Mixin para estilos de botón */
+/* Mixin para estilos de caja de información */
+/* Reutilizando estilos con @extend */
+.base-box, .info-box img {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Reset de estilos para mayor consistencia en diferentes navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Estilos del encabezado (header) */
+header {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+header .logo-container img {
+  margin-right: 10px;
+  height: 100px;
+}
+header .title {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+header img {
+  height: 100px;
+}
+
+nav {
+  display: inline-block;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  color: #ffffff;
+  font-size: x-large;
+  font-weight: normal;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Estilos de la barra de navegación (navbar) */
+.navbar {
+  margin-bottom: 20px;
+}
+
+.responsive-iframe {
+  width: 100%;
+  aspect-ratio: 16/9; /* 16:9 aspect ratio for widescreen videos */
+}
+
+/* Estilos de la cuadrícula de categorías */
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin: 50px;
+}
+
+.categories-container p {
+  color: #ffffff;
+  font-size: x-small;
+  font-weight: normal;
+}
+
+/* Estilos de cada categoría */
+.category {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+}
+.category img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.category p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Estilos de la cuadrícula de productos */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Esto establece el contenedor con una proporción 16:9 (dividir 9 por 16 y multiplicar por 100) */
+  overflow: hidden; /* Evita que el video se desborde del contenedor */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Esto hace que el video cubra todo el contenedor */
+}
+/* Estilos del pie de página (footer) */
+footer {
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 3px 0;
+  width: 100%; /* Asegurar que ocupe todo el ancho de la pantalla */
+}
+
+/* Estilos de la información en el pie de página */
+.footer-info {
+  margin-top: 10px;
+}
+
+.location,
+.language {
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Estilos de la información de contacto */
+.contact-info {
+  text-align: center;
+}
+.contact-info h2 {
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Estilos del formulario de agendamiento */
+.contact-form {
+  text-align: center;
+}
+.contact-form h2 {
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.contact-form form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-form label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: row; /* Cambia la dirección de los elementos a horizontal */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+h1 {
+  margin-top: 20px; /* Espacio superior para separarlo del contenido anterior */
+  margin-bottom: 10px; /* Espacio inferior para separarlo del contenido siguiente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  font-size: large;
+}
+
+.info-box {
+  margin-bottom: 8px;
+  width: max-content; /* Establece el ancho del contenedor al ancho máximo posible */
+  height: max-content; /* Establece la altura del contenedor a la altura máxima posible */
+}
+
+.info-box img {
+  max-width: 55%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+  /* Extendiendo estilos */
+  margin-bottom: 20px; /* Añade un margen inferior entre la imagen y el texto */
+}
+
+.info-box p {
+  max-width: 100%; /* Establece el ancho máximo del texto al ancho máximo del contenedor */
+  font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+}
+
+.additional-info {
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  max-width: 40%; /* Establece el ancho máximo del texto al ancho máximo del contenedor */
+  margin-right: 200px;
+  font-size: large;
+}
+
+.studio-section {
+  display: flex;
+  flex-direction: column; /* Establece la dirección de los elementos como columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.studio-description h2 {
+  margin-bottom: 30px; /* Agrega un margen en la parte inferior del título */
+}
+
+.studio-description {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  /* Reutilizando estilos */
+  background-color: #1a1a1a; /* Cambia el color de fondo */
+  border: 2px solid #8a0000; /* Añade un borde resaltado */
+}
+
+.studio-image {
+  margin-bottom: 30px; /* Iguala el margen inferior con el margen del texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.studio-image img {
+  max-width: 63%; /* Establece el ancho máximo de la imagen al 100% del contenedor padre */
+  height: auto; /* Esto asegura que la altura se ajuste automáticamente para mantener la relación de aspecto */
+  border: 2px solid #8a0000; /* Añade un borde resaltado */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+button:hover {
+  background-color: #1d2124;
+}
+
+@media only screen and (min-width: 1170px) {
+  .logo-container .title {
+    display: inline; /* Asegura que el título esté visible en tamaños mayores a 1160px */
+  }
+}
+/* Estilos para tamaños de pantalla menores o iguales a 1160px */
+@media only screen and (max-width: 1170px) {
+  .logo-container .title {
+    display: none; /* Oculta el título en tamaños de pantalla de 1160px o menores */
+  }
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .logo-container .title {
+    display: none; /* Oculta el título en tamaños de pantalla móvil */
+  }
+  .info-box img {
+    max-width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin-bottom: 20px; /* Añade un margen inferior */
+    max-height: 200px; /* Establece la altura máxima de la imagen en dispositivos móviles */
+  }
+  .info-box {
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+  .info-box p {
+    font-size: 11px;
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  main {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    align-items: center; /* Centra los elementos */
+  }
+  .additional-info {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center; /* Centra el texto dentro del contenedor */
+    font-size: small;
+    max-width: 80%; /* Define un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    /* Reutilizando estilos */
+  }
+  .h1 {
+    margin-bottom: 150px;
+  }
+  .studio-image {
+    width: 430px;
+  }
+  .studio-description {
+    font-size: small;
+  }
+  .studio-section {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el tamaño de las columnas según el ancho disponible */
+    margin: 80px; /* Añade un poco de espacio entre las categorías */
+  }
+  #contacto {
+    display: block;
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    margin-bottom: 20px; /* Agrega un margen inferior entre las dos secciones */
+  }
+  .title {
+    font-size: 18px;
+  }
+  /* Oculta la lista de navegación principal en dispositivos móviles */
+  nav ul {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    align-items: center; /* Centra los elementos */
+    width: 100%; /* Establece el ancho al 100% */
+    padding: 3px 0; /* Añade un poco de espacio entre los elementos */
+  }
+  nav li {
+    margin: 1px 0; /* Añade un poco de espacio entre los elementos */
+  }
+  /* Ajustes para el tamaño del texto del menú */
+  nav a {
+    font-size: 16px; /* Cambia el tamaño del texto según sea necesario */
+  }
+  /* Ajustes para las categorías */
+  .categories-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el tamaño de las columnas según el ancho disponible */
+    margin: 20px; /* Añade un poco de espacio entre las categorías */
+  }
+  /* Ajustes para el tamaño del texto dentro de las categorías */
+  .category p {
+    font-size: 14px; /* Cambia el tamaño del texto según sea necesario */
+  }
+  header .navbar {
+    display: block;
+    background-color: #000000;
+  }
+  header a {
+    display: block;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+  }
+  header a:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+  header nav a {
+    font-size: 14px;
+  }
+  footer {
+    padding: 10px 0;
+  }
+  .social-icons a {
+    font-size: 30px;
+  }
+  .location,
+  .language {
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
