@@ -118,16 +118,7 @@ nav a:hover {
   margin: 0;
   font-weight: bold;
 }
-.video-container {
-  position: relative;
-  padding-top: 100%; /* Esto establece el contenedor con una proporción 16:9 (dividir 9 por 16 y multiplicar por 100) */
-  overflow: hidden; /* Evita que el video se desborde del contenedor */
-}
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 400px;
-}
+
 /* Estilos de la cuadrícula de productos */
 .grid-container {
   display: grid;
@@ -353,18 +344,7 @@ button:hover {
     text-align: center;
     /* Reutilizando estilos */
   }
-  .video-container {
-    position: relative;
-    width: 430px;
-    height: 700px;
-    padding-top: 100%; /* Esto establece el contenedor con una proporción 16:9 (dividir 9 por 16 y multiplicar por 100) */
-    overflow: hidden; /* Evita que el video se desborde del contenedor */
-  }
-  .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+
   .h1 {
     margin-bottom: 150px;
   }
